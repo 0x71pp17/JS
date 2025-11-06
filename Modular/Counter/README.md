@@ -3,9 +3,9 @@
 A simple JavaScript counter
 
 ## Key Concepts Covered
-- DOM selection and updating
-- Event listeners
-- Variable state management
+- **DOM selection and updating**: `document.getElementById('counter')` selects the element; `counterDisplay.textContent = count` updates it.  
+- **Event listeners**: `incrementBtn.addEventListener('click', ...)` attaches click behavior to buttons.  
+- **Variable state management**: The `count` variable holds the current value, persisted in memory across interactions.
 - Code clarity with comments
 
 ## Usage
