@@ -15,7 +15,12 @@ A simple JavaScript password generator with customizable options.
   - `passwordEl.select()` selects all text for copying.  
   - `document.execCommand('copy')` executes the copy command (legacy method).  
   - Modern alternative: `navigator.clipboard.writeText()` (preferred, but requires HTTPS and user permission).  
-- **Cryptographically secure randomness**: Uses `crypto.getRandomValues()` with `Uint32Array` to generate secure random indices. `Uint32Array` is a JavaScript typed array that holds 32-bit unsigned integers (0 to 4,294,967,295), ensuring high-quality randomness for password generation.
+- **Cryptographically secure randomness**: Uses `crypto.getRandomValues()` with `Uint32Array` to generate secure random indices. `Uint32Array` is a JavaScript typed array that holds 32-bit unsigned integers (0 to 4,294,967,295), ensuring high-quality randomness for password generation.  
+  - `crypto.getRandomValues()` is part of **Web Crypto API**, a browser-built interface for secure cryptographic operations.  
+  - It runs **locally**—no network requests are made.  
+  - The term "API" refers to its role as a standardized **programming interface** to access the browser’s underlying cryptographic capabilities.  
+  - Leverages OS-level entropy sources (e.g., `/dev/urandom` on Linux) for true unpredictability.
+
 
 
 ## Usage
