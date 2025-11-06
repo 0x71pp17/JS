@@ -12,26 +12,26 @@ lengthEl.addEventListener('input', () => {
   lengthValueEl.textContent = lengthEl.value;
 });
 
-// Generate password based on user settings
+// Generate cryptographically secure password
 function generatePassword() {
   const length = parseInt(lengthEl.value);
   const includeNumbers = numbersEl.checked;
   const includeSpecial = specialEl.checked;
 
-  // Start with uppercase and lowercase letters
+  // Build character set based on user options
   let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-  // Add numbers if selected
   if (includeNumbers) chars += "0123456789";
-  // Add special characters if selected
   if (includeSpecial) chars += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
-  // Build random password
+  // Use crypto.getRandomValues for secure randomness
+  const randomValues = new Uint32Array(length);
+  window.crypto.getRandomValues(randomValues);
+
   let password = "";
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * chars.length);
+    const randomIndex = randomValues[i] % chars.length;
     password += chars[randomIndex];
   }
-  // Display generated password
   passwordEl.value = password;
 }
 
