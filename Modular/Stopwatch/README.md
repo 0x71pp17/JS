@@ -1,6 +1,6 @@
 # Stopwatch
 
-A simple JavaScript stopwatch demonstrating core web concepts.
+A simple JavaScript stopwatch
 
 ## Key Concepts Covered
 - **DOM selection and updating**: `document.getElementById('time-display')` selects the display; `textContent` updates it.
