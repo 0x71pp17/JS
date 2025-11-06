@@ -20,5 +20,4 @@ This avoids direct `eval()` while safely evaluating math expressions.
 
 Input is validated with `/^[\d+\-*/(). ]+$/` to block unsafe characters, mitigating code injection.
 
-> ⚠️ **Security Note**: While `Function` is safer than `eval()`, it's not bulletproof. Some engines may execute malicious code during parsing. For production, use a dedicated math library like [math.js](https://mathjs.org/) or [js-expression-eval](https://github.com/silentmatt/js-expression-eval).
-
+> ⚠️ **Security Note**: While `Function` is safer than `eval()`, it's not bulletproof. Some engines may execute malicious code during parsing. Additional security can be gained by using dedicated math libraries like [math.js](https://mathjs.org/) or [js-expression-eval](https://github.com/silentmatt/js-expression-eval), which parse expressions without relying on JavaScript's execution engine.
