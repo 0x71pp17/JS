@@ -32,4 +32,5 @@ async function discoverEndpoints(url) {
   await browser.close();
 }
 
-discoverEndpoints('https://example.com');   
+// Replace 'https://example.com' with the target URL you want to scan
+discoverEndpoints('https://example.com');    
