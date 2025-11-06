@@ -1,20 +1,33 @@
-// COUNTER PROGRAM
+// Get DOM elements
+const counterDisplay = document.getElementById('counter');
+const incrementBtn = document.getElementById('increment');
+const decrementBtn = document.getElementById('decrement');
+const resetBtn = document.getElementById('reset');
 
-const decreaseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById("countLabel");
 let count = 0;
 
-increaseBtn.onclick = function(){
-    count++;
-    countLabel.textContent = count;
+// Update display with current count
+function updateDisplay() {
+  counterDisplay.textContent = count;
 }
-decreaseBtn.onclick = function(){
-    count--;
-    countLabel.textContent = count;
-}
-resetBtn.onclick = function(){
-    count = 0;
-    countLabel.textContent = count;
-}
+
+// Increment count
+incrementBtn.addEventListener('click', () => {
+  count++;
+  updateDisplay();
+});
+
+// Decrement count
+decrementBtn.addEventListener('click', () => {
+  count--;
+  updateDisplay();
+});
+
+// Reset count to zero
+resetBtn.addEventListener('click', () => {
+  count = 0;
+  updateDisplay();
+});
+
+// Initialize display
+updateDisplay();   
