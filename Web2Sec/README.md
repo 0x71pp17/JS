@@ -13,7 +13,7 @@ A simple JavaScript tool to discover endpoints on a website by scraping HTML lin
 node -v
 npm -v
 ```
-Both should display versions. If not, install Node.js from [nodejs.org](https://nodejs.org), which includes npm.
+Both commands should display versions. If not, install Node.js from [nodejs.org](https://nodejs.org), which includes npm.
 
 2. **Install Puppeteer**:
 ```bash
