@@ -1,0 +1,27 @@
+#time-display {
+  font-size: 75px;
+  color: #333;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+.timer-button {
+  width: 80px;
+  height: 30px;
+  margin: 5px;
+  border: 3px solid #555;
+  border-radius: 12px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+
+#time-container {
+  text-align: center;
+  border: 3px solid #555;
+  border-radius: 25px;
+  padding: 20px;
+  width: 300px;
+  margin: auto;
+}   
