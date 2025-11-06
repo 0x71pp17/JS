@@ -2,7 +2,7 @@
 
 A simple JavaScript password generator with customizable options.
 
-## Key Concepts Covered
+## Code Context & Implementation
 - **DOM selection and updating**: `getElementById` accesses form elements; `value` and `textContent` update display.  
 - **Event listeners**: `addEventListener` responds to user input and button clicks.  
 - **Variable state management**: Tracks user preferences (length, character types) and generated password.  
