@@ -7,6 +7,10 @@ A simple JavaScript password generator with customizable options.
 - **Event listeners**: `addEventListener` responds to user input and button clicks.
 - **Variable state management**: Tracks user preferences (length, character types) and generated password.
 - **Dynamic string building**: Constructs character set based on user choices.
+- `specialEl.checked` reads the **boolean state** (true/false) of a checkbox, indicating if special characters should be included.  
+- `parseInt(lengthEl.value)` converts the **string input** from the length slider into an **integer**, ensuring correct numeric operations.
+
+
 - **Cryptographically secure randomness**: Uses `crypto.getRandomValues()` with `Uint32Array` to generate secure random indices. `Uint32Array` is a JavaScript typed array that holds 32-bit unsigned integers (0 to 4,294,967,295), ensuring high-quality randomness for password generation.
 
 
