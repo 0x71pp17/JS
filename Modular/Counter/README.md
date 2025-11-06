@@ -1,8 +1,16 @@
 # Counter App
 
 A simple JavaScript counter
+- **Increment and decrement controls**: Buttons increase or decrease the counter by 1 with each click.  
+- **Reset functionality**: A dedicated button resets the count to zero. 
+- **Real-time display**: The current count is shown in a central display, updated instantly using `textContent`.  
+- **User interface**: Layout with visually distinct buttons (e.g., color-coded for action type).  
+- **State persistence**: The `count` variable maintains the current value across interactions.  
+- **Event-driven interaction**: Clicks are handled via `addEventListener`.  
+- **No external dependencies**: Built with vanilla JavaScript, HTML, and CSS for broad compatibility.
 
-## Key Concepts Covered
+
+## Code Context - Core Concepts Implemented
 - **DOM selection and updating**: `document.getElementById('countLabel')` selects the element; `counterDisplay.textContent = count` updates it.  
 - **Event listeners**: `incrementBtn.addEventListener('click', ...)` attaches click behavior to buttons.  
 - **Variable state management**: The `count` variable holds the current value, persisted in memory across interactions.
