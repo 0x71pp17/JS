@@ -32,5 +32,5 @@ node discoverEndpoints.js
 > Replace `'https://example.com'` with the target URL in `discoverEndpoints.js` code befoe running the script.
 
 ## Notes
-- This script is intended for ethical (**`authorized & permissioned`**) security research purposes only.
+⚠️ This script is intended for ethical (**`authorized & permissioned`**) security research purposes only.   
 
