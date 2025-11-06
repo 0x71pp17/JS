@@ -19,7 +19,7 @@ A simple JavaScript password generator with customizable options.
   - `crypto.getRandomValues()` is part of **Web Crypto API**, a browser-built interface for secure cryptographic operations.  
   - It runs **locally**—no network requests are made.  
   - The term "API" refers to its role as a standardized **programming interface** to access the browser’s underlying cryptographic capabilities.  
-  - Leverages OS-level entropy sources (e.g., `/dev/urandom` on Linux) for true unpredictability.
+  - Leverages OS-level entropy sources (e.g., `/dev/urandom` on Linux, `BCryptGenRandom` on Windows, `Secure Enclave` on macOS) for true unpredictability.
 
 
 
