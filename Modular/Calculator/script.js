@@ -1,24 +1,22 @@
-// Display input or operator on screen
-function display(value) {
-  document.getElementById('result').value += value;
-}
-
-// Clear entire display
-function clearScreen() {
-  document.getElementById('result').value = '';
-}
-
-// Remove last character
-function backspace() {
-  let currentValue = document.getElementById('result').value;
-  document.getElementById('result').value = currentValue.slice(0, -1);
-}
-
-// Calculate result using eval()
+// Calculate result safely without eval
 function calculate() {
   let expression = document.getElementById('result').value;
+
+  // Prevent empty or invalid input
+  if (!expression) {
+    document.getElementById('result').value = 'Error';
+    return;
+  }
+
+  // Allow only numbers, operators (+, -, *, /), and parentheses
+  if (!/^[\d+\-*/(). ]+$/.test(expression)) {
+    document.getElementById('result').value = 'Invalid';
+    return;
+  }
+
   try {
-    let result = eval(expression);
+    // Use Function constructor in strict mode for safer evaluation
+    let result = Function('"use strict"; return (' + expression + ')')();
     document.getElementById('result').value = result;
   } catch (error) {
     document.getElementById('result').value = 'Error';
