@@ -1,6 +1,15 @@
 # Random Password Generator
 
 A simple JavaScript password generator with customizable options.
+- **Dynamic character set selection**: Builds the pool of available characters based on user choices—includes uppercase, lowercase, numbers, and special characters only when selected.  
+- **Configurable password length**: Uses a slider input to let users define password length (6–20 characters), updated in real-time via `input` event.  
+- **Cryptographically secure generation**: Leverages `crypto.getRandomValues()` with `Uint32Array` for high-entropy randomness, suitable for security-sensitive use.  
+- **Real-time feedback**: Displays selected length dynamically using `lengthValueEl.textContent`.  
+- **User-controlled complexity**: Checkboxes for numbers and special characters let users customize password strength.  
+- **Secure clipboard copy**: Copies generated password using `document.execCommand('copy')` after selecting the input field.  
+- **Prevents unintended execution**: Uses `value` instead of `innerHTML`, avoiding XSS risks.  
+- **State persistence**: Tracks user preferences and generated output without external dependencies.
+
 
 ## Code Context & Implementation
 - **DOM selection and updating**: `getElementById` accesses form elements; `value` and `textContent` update display.  
