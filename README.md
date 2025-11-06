@@ -1,5 +1,3 @@
-# JS
-### Bro Code JS Builds
+# JS Code Dev
 
-JS Build Walkthroughs:
-[Bro Code - JavaScript Full Course (2024)](https://www.youtube.com/watch?v=lfmg-EJ8gm4)
+This public repository is a personal space dedicated to JavaScript development, focusing on interactive, fully working front-end code—serving as a simple, practical reference for learning and experimentation.
