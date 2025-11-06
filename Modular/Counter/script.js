@@ -1,8 +1,8 @@
 // Get DOM elements
-const counterDisplay = document.getElementById('counter');
-const incrementBtn = document.getElementById('increment');
-const decrementBtn = document.getElementById('decrement');
-const resetBtn = document.getElementById('reset');
+const counterDisplay = document.getElementById('countLabel');
+const incrementBtn = document.getElementById('increaseBtn');
+const decrementBtn = document.getElementById('decreaseBtn');
+const resetBtn = document.getElementById('resetBtn');
 
 let count = 0;
 
